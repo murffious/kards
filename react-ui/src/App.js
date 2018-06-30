@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MiniDrawer from "./components/AppBar";
+// import IconHtml5 from 'react-devicon/html5/plain-wordmark';
+import Devicon from 'devicon-react/src';
+ 
 
 class App extends Component {
   constructor(props) {
@@ -35,11 +38,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
+        <MiniDrawer />
+        <div>
+    <Devicon name="react" logoStyle="original"/>
+  </div>      
+    <p className="App-intro">
           {'This is '}
           <a href="https://github.com/mars/heroku-cra-node">
             {'create-react-app with a custom Node/Express server'}
