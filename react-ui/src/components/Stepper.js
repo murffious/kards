@@ -6,6 +6,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import ScoreModal from './ScoreModal';
 
 const styles = theme => ({
   root: {
@@ -167,6 +168,9 @@ class HorizontalLinearStepper extends React.Component {
               </div>
             </div>
           )}
+        </div>
+        <div>
+        <ScoreModal />
         </div>
       </div>
     );

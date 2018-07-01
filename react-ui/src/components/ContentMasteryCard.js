@@ -13,6 +13,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import classnames from 'classnames';
 import CommentApp from './comment-react/containers/CommentApp';
 import LinksList from './LinksList';
+import AddIcon from '@material-ui/icons/Add';
 
 const styles = theme => ({
   card: {
@@ -49,7 +50,10 @@ const styles = theme => ({
   },
   links: {
     borderLeft: "1px solid black"
-  }
+  },
+  button: {
+    margin: theme.spacing.unit,
+  },
 });
 
 class SimpleCard extends Component {
@@ -80,7 +84,7 @@ render () {
           HTML Elements
           </Typography>
           <Typography className={classes.pos} color="textSecondary">
-           : p, div, h1, h2, h3, a, img, nav, header, section, footer, form, input, ul, li, label, textarea
+           <p>: p,</p> <p>div,</p> h1, h2, h3, a, img, nav, header, section, footer, form, input, ul, li, label, textarea
 
 Remember to know about all the ‘attributes’ of each tag! Reference: https://htmlreference.io/ or w3 schools
 
@@ -91,7 +95,9 @@ Remember to know about all the ‘attributes’ of each tag! Reference: https://
           </Typography>
           </div>
             <div className={classes.links} >
-            Helpful Links for Starters
+            Helpful Links for Starters <Button variant="fab" mini color="secondary" aria-label="add" className={classes.button}>
+          <AddIcon />
+        </Button>
             <LinksList />
             </div>
           </div>

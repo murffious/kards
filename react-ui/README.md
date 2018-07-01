@@ -183,10 +183,6 @@ understadning how compters work
 DEv ops
 my fullstack mastery apply book
 
-ALONG with my 4 combined efforts
-repo activities and all that
-copy from best tutotrisl
-
 Resources
 BOiler plate AUTH and starters
 
@@ -195,3 +191,28 @@ warning and benefits
 
 recommended companion courses
 see book files
+
+Score -
+0-100
+80/20 coding rule
+
+Frustrating cuase W3Schools has those huge lists under TUTORIALS
+and that is like the perfect list
+W#schools quizes
+and that one site used at dev mtn
+5-6 that might be useful
+
+https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP
+Explanation of site and how it can should be used
+
+officical ECMA script links
+ALONG with my 4 combined efforts
+repo activities and all that
+copy from best tutorials - like the CATEGORY content lists
+and so forth
+
+It gets so big how to orient the user ? guide them little by little
+
+CSS style framworks element ui awesome list for front end dev
+
+submit feedback on dashbporad helpnbugs etc
