@@ -21,17 +21,19 @@ const styles = theme => ({
 });
 
 function getSteps() {
-  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+  return ['Study example', 'Look at Documentation', 'Review Conceptually', 'Do In-Class Activity'];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return 'Select campaign settings...';
+      return 'Study example';
     case 1:
-      return 'What is an ad group anyways?';
+      return 'Look at Documentation';
     case 2:
-      return 'This is the bit I really care about!';
+      return 'Review Conceptually';
+    case 3:
+      return 'Do In-Class Activity';
     default:
       return 'Unknown step';
   }

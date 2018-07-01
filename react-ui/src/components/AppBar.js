@@ -30,7 +30,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab, faHtml5, faCss3Alt, faJs, faNodeJs, faGithubSquare, faLinkedinIn, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faLaptop, faCode, faTerminal } from '@fortawesome/free-solid-svg-icons'
 import Stepper from './Stepper';
-
+import Stepper2 from './Stepper2';
+import ContentMasteryCard from './ContentMasteryCard';
+import LinksCard from './LinksCard';
+import Kard from './Kard';
+import Badge from '@material-ui/core/Badge';
+import MasteryEval from './MasteryEval';
 
 
 library.add(fab, faHtml5, faCss3Alt, faJs, faNodeJs, faDatabase, faGithubSquare, faLinkedinIn, faGoogle, faLaptop, faCode, faTerminal )
@@ -42,7 +47,7 @@ const styles = theme => ({
     flexGrow: 1,
     height: 430,
     zIndex: 1,
-    overflow: 'hidden',
+    overflow: 'auto',
     position: 'relative',
     display: 'flex',
   },
@@ -98,11 +103,14 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing.unit * 3
   },
   nested: {
     paddingLeft: theme.spacing.unit * 4,
-  }
+  },
+  margin: {
+    margin: theme.spacing.unit * 2,
+  },
 });
 
 class MiniDrawer extends React.Component {
@@ -161,8 +169,10 @@ class MiniDrawer extends React.Component {
           
           <List>
           <ListItem button onClick={this.handleExpand}>
+          <Badge className={classes.margin} badgeContent={4} color="primary">
+        
           <FontAwesomeIcon size="lg" icon={['fab', 'html5']} />
-
+        </Badge>
             <ListItemText inset primary="HTML" />
             {this.state.expand ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
@@ -187,6 +197,11 @@ class MiniDrawer extends React.Component {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Stepper />
+          <ContentMasteryCard />
+          <LinksCard />
+          <div >
+          <Kard />
+          </div>
           <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
         </main>
       </div>
