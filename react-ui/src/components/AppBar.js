@@ -218,10 +218,10 @@ class MiniDrawer extends React.Component {
           <div className={classes.toolbar} />
           <Stepper />
           <ContentMasteryCard />
-          <LinksCard />
-          <div >
+          {/* <LinksCard /> */}
+          {/* <div >
           <Kard />
-          </div>
+          </div> */}
           <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
         </main>
       </div>

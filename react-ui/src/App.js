@@ -39,8 +39,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <MiniDrawer /> */}
+        <MiniDrawer />
         {/* <LoginPage /> */}
+        <p className="App-intro">
+          {'This is '}
+          <a href="https://github.com/mars/heroku-cra-node">
+            {'create-react-app with a custom Node/Express server'}
+          </a><br/>
+        </p>
+        <p className="App-intro">
+          {this.state.fetching
+            ? 'Fetching message from API'
+            : this.state.message}
+        </p>
         <Router>
     <div>
       {/* <ul>
@@ -57,7 +68,7 @@ class App extends Component {
 
       <hr /> */}
 
-      <Route exact path="/" component={LoginPage} />
+      {/* <Route exact path="/" component={LoginPage} /> */}
       {/* <Route path="/about" component={About} />
       <Route path="/topics" component={Topics} /> */}
     </div>
@@ -65,17 +76,7 @@ class App extends Component {
         <div>
    
   </div>      
-    <p className="App-intro">
-          {'This is '}
-          <a href="https://github.com/mars/heroku-cra-node">
-            {'create-react-app with a custom Node/Express server'}
-          </a><br/>
-        </p>
-        <p className="App-intro">
-          {this.state.fetching
-            ? 'Fetching message from API'
-            : this.state.message}
-        </p>
+    
       </div>
     );
   }

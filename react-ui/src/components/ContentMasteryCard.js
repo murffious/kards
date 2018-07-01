@@ -12,6 +12,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import classnames from 'classnames';
 import CommentApp from './comment-react/containers/CommentApp';
+import LinksList from './LinksList';
 
 const styles = theme => ({
   card: {
@@ -42,6 +43,13 @@ const styles = theme => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
+  content: {
+    display: "flex"
+    
+  },
+  links: {
+    borderLeft: "1px solid black"
+  }
 });
 
 class SimpleCard extends Component {
@@ -61,7 +69,10 @@ render () {
   return (
     <div>
       <Card className={classes.card}>
+        
         <CardContent>
+        <div className={classes.content}>
+          <div>
           <Typography className={classes.title} color="textSecondary">
             Coding Bootcamp HW Essentials - Master this to be able to do the Weekly HW
           </Typography>
@@ -78,6 +89,12 @@ Remember to know about all the ‘attributes’ of each tag! Reference: https://
             well meaning and kindly.<br />
             {'"a benevolent smile"'}
           </Typography>
+          </div>
+            <div className={classes.links} >
+            Helpful Links for Starters
+            <LinksList />
+            </div>
+          </div>
         </CardContent>
         <CardActions>
           <Button size="small">Notes Questions Comments  <IconButton
