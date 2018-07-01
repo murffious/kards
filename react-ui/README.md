@@ -21,3 +21,11 @@ turn comments into flash cards then make BUTTON at top for them
 reminder snack bar - for task completed and on click someting REMEMBER to write quality CELAN code.
 
 maybe a dashboard options for SKILLS and go to skills screen how to think liek programmer algorithms number of projects who knows
+
+progress stepper
+watch in any bootcamp youtube walk through and class activity review .
+
+DASHBAORD - WHY THIS TOOL ? why another tool
+
+Learning strategies next to skills
+STUCK READ ME stuff
