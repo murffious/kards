@@ -182,3 +182,16 @@ understadning how compters work
 
 DEv ops
 my fullstack mastery apply book
+
+ALONG with my 4 combined efforts
+repo activities and all that
+copy from best tutotrisl
+
+Resources
+BOiler plate AUTH and starters
+
+w3Schools and MDN for HTML CSS Javascript
+warning and benefits
+
+recommended companion courses
+see book files
