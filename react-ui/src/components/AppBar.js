@@ -36,7 +36,13 @@ import LinksCard from './LinksCard';
 import Kard from './Kard';
 import Badge from '@material-ui/core/Badge';
 import MasteryEval from './MasteryEval';
-
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import FavoriteIcon from '@material-ui/icons/Favorite'
+import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/Add';
+import Icon from '@material-ui/core/Icon';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
 
 library.add(fab, faHtml5, faCss3Alt, faJs, faNodeJs, faDatabase, faGithubSquare, faLinkedinIn, faGoogle, faLaptop, faCode, faTerminal )
 
@@ -111,6 +117,12 @@ const styles = theme => ({
   margin: {
     margin: theme.spacing.unit * 2,
   },
+  button: {
+    margin: theme.spacing.unit,
+  },
+  extendedIcon: {
+    marginRight: theme.spacing.unit,
+  }
 });
 
 class MiniDrawer extends React.Component {
@@ -151,6 +163,11 @@ class MiniDrawer extends React.Component {
             <Typography variant="title" color="inherit" noWrap>
               KARDS - A Learning Mastery Tool 
             </Typography>
+            <Button variant="extendedFab" aria-label="delete" className={classes.button}>
+              <NavigationIcon className={classes.extendedIcon} />
+              Reference Guide
+            </Button>
+
           </Toolbar>
         </AppBar>
         <Drawer

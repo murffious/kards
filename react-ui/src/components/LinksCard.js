@@ -86,7 +86,7 @@ class LinksCard extends Component {
                 tabIndex={-1}
                 disableRipple
               />
-              <ListItemText primary={`Line item ${value + 1}`} />
+              <ListItemText primary={`https://htmlreference.io/ ${value + 1}`} />
               <ListItemSecondaryAction>
                 <Likes />
               </ListItemSecondaryAction>

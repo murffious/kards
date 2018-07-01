@@ -63,13 +63,13 @@ render () {
       <Card className={classes.card}>
         <CardContent>
           <Typography className={classes.title} color="textSecondary">
-            Coding Bootcamp HW Essentials
+            Coding Bootcamp HW Essentials - Master this to be able to do the Weekly HW
           </Typography>
           <Typography variant="headline" component="h2">
           HTML Elements
           </Typography>
           <Typography className={classes.pos} color="textSecondary">
-          Master these elements : p, div, h1, h2, h3, a, img, nav, header, section, footer, form, input, ul, li, label, textarea
+           : p, div, h1, h2, h3, a, img, nav, header, section, footer, form, input, ul, li, label, textarea
 
 Remember to know about all the ‘attributes’ of each tag! Reference: https://htmlreference.io/ or w3 schools
 

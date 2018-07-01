@@ -21,7 +21,7 @@ const styles = theme => ({
 });
 
 function getSteps() {
-  return ['Study example', 'Look at Documentation', 'Review Conceptually', 'Do In-Class Activity'];
+  return ['Study example', 'Look at Documentation', 'Review Conceptually', 'Do In-Class Activity', 'Sandbox Strech Activity', 'Make Flash Cards'];
 }
 
 function getStepContent(step) {
@@ -34,6 +34,10 @@ function getStepContent(step) {
       return 'Review Conceptually';
     case 3:
       return 'Do In-Class Activity';
+    case 4:
+      return 'Sandbox Strech Activity';
+    case 5:
+      return 'Make Flash Cards';
     default:
       return 'Unknown step';
   }

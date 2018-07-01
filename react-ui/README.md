@@ -1,1 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+If KARD mastering score is less than 4/5 or 80 overall tehn RESET and start over the item
+
+SO in master list its just a reference of where to go and bypass all this fancy stuff
+
+Dashbaord
+has 1 graph of overal mastery scores
+overall tasks done and left
+
+explanations and settings to turn off and on remnders stuff or something
+and maybe links to email teacher or corrine who knows.
+
+DEMO examples of KARD and pop up modal of what an exmaple screen or notes section or sand box or soemthing
+
+ADMIN tab - sees scores of each student for each task - Maybe add and delete links and see list of all links and likes and dislikes
