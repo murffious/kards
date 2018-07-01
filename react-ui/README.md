@@ -14,3 +14,10 @@ and maybe links to email teacher or corrine who knows.
 DEMO examples of KARD and pop up modal of what an exmaple screen or notes section or sand box or soemthing
 
 ADMIN tab - sees scores of each student for each task - Maybe add and delete links and see list of all links and likes and dislikes
+
+maybe add flash cards but not sure
+turn comments into flash cards then make BUTTON at top for them
+
+reminder snack bar - for task completed and on click someting REMEMBER to write quality CELAN code.
+
+maybe a dashboard options for SKILLS and go to skills screen how to think liek programmer algorithms number of projects who knows
