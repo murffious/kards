@@ -25,10 +25,13 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 import MenuItem from '@material-ui/core/MenuItem';
+
+// Font Awesome React
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab, faHtml5, faCss3Alt, faJs, faNodeJs, faGithubSquare, faLinkedinIn, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faLaptop, faCode, faTerminal } from '@fortawesome/free-solid-svg-icons'
+
 import Stepper from './Stepper';
 import Stepper2 from './Stepper2';
 import ContentMasteryCard from './ContentMasteryCard';
