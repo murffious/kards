@@ -24,9 +24,16 @@ import SendIcon from '@material-ui/icons/Send';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
+import MenuItem from '@material-ui/core/MenuItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab, faHtml5, faCss3Alt, faJs, faNodeJs, faGithubSquare, faLinkedinIn, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faDatabase, faLaptop, faCode, faTerminal } from '@fortawesome/free-solid-svg-icons'
+import Stepper from './Stepper';
 
-// icons
-import IconHtml5 from 'react-devicon/html5/plain-wordmark';
+
+
+library.add(fab, faHtml5, faCss3Alt, faJs, faNodeJs, faDatabase, faGithubSquare, faLinkedinIn, faGoogle, faLaptop, faCode, faTerminal )
 
 const drawerWidth = 240;
 
@@ -151,21 +158,26 @@ class MiniDrawer extends React.Component {
             </IconButton>
           </div>
           <Divider />
+          
+          <List>
           <ListItem button onClick={this.handleExpand}>
-        <ListItemIcon children={<IconHtml5 width={30} height={30}/>}>
-              
-              
+          <FontAwesomeIcon size="lg" icon={['fab', 'html5']} />
 
-            </ListItemIcon>
             <ListItemText inset primary="HTML" />
             {this.state.expand ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
+          </List>
           <Collapse in={this.state.expand} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
-                <ListItemIcon>
-                </ListItemIcon>
-                <ListItemText inset primary="Starred" />
+                {/* <ListItemIcon>
+                </ListItemIcon> */}
+                <ListItemText inset primary="Elements" />
+              </ListItem>
+              <ListItem button className={classes.nested}>
+                {/* <ListItemIcon>
+                </ListItemIcon> */}
+                <ListItemText inset primary="HTML Documents" />
               </ListItem>
             </List>
           </Collapse>
@@ -174,6 +186,7 @@ class MiniDrawer extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
+          <Stepper />
           <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
         </main>
       </div>

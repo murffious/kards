@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import MiniDrawer from "./components/AppBar";
-// import IconHtml5 from 'react-devicon/html5/plain-wordmark';
-import Devicon from 'devicon-react/src';
+
  
 
 class App extends Component {
@@ -40,7 +39,7 @@ class App extends Component {
       <div className="App">
         <MiniDrawer />
         <div>
-    <Devicon name="react" logoStyle="original"/>
+   
   </div>      
     <p className="App-intro">
           {'This is '}
