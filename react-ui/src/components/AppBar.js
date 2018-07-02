@@ -46,6 +46,7 @@ import AddIcon from '@material-ui/icons/Add';
 import Icon from '@material-ui/core/Icon';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import { Progressbar } from './circular-progress-bar/CircularProgressBar';
 
 library.add(fab, faHtml5, faCss3Alt, faJs, faNodeJs, faDatabase, faGithubSquare, faLinkedinIn, faGoogle, faLaptop, faCode, faTerminal )
 
@@ -217,6 +218,7 @@ class MiniDrawer extends React.Component {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Stepper />
+          <Progressbar />
           <ContentMasteryCard />
           {/* <LinksCard /> */}
           {/* <div >

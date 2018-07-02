@@ -3,7 +3,7 @@ import './App.css';
 import MiniDrawer from "./components/AppBar";
 import LoginPage from './components/LoginPage';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import Dashboard from './components/dashboard/src/views/Dashboard/Dashboard.jsx';
  
 
 class App extends Component {
@@ -39,7 +39,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MiniDrawer />
+      <Dashboard />
+        {/* <MiniDrawer /> */}
         {/* <LoginPage /> */}
         <p className="App-intro">
           {'This is '}
