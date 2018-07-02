@@ -32,9 +32,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab, faHtml5, faCss3Alt, faJs, faNodeJs, faGithubSquare, faLinkedinIn, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faLaptop, faCode, faTerminal } from '@fortawesome/free-solid-svg-icons'
 
-import Stepper from './Stepper';
-import Stepper2 from './Stepper2';
-import ContentMasteryCard from './ContentMasteryCard';
+
 import LinksCard from './LinksCard';
 import Kard from './Kard';
 import Badge from '@material-ui/core/Badge';
@@ -47,6 +45,10 @@ import Icon from '@material-ui/core/Icon';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import { Progressbar } from './circular-progress-bar/CircularProgressBar';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Dashboard from './dashboard/src/views/Dashboard/Dashboard.jsx';
+import ContentContainer from '../containers/ContentContainer';
+import UserProfile from './dashboard/src/views/UserProfile/UserProfile';
 
 library.add(fab, faHtml5, faCss3Alt, faJs, faNodeJs, faDatabase, faGithubSquare, faLinkedinIn, faGoogle, faLaptop, faCode, faTerminal )
 
@@ -217,13 +219,36 @@ class MiniDrawer extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Stepper />
-          <Progressbar />
-          <ContentMasteryCard />
+          
+          
+      
           {/* <LinksCard /> */}
           {/* <div >
           <Kard />
           </div> */}
+             <Router>
+    <div>
+      {/* <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/topics">Topics</Link>
+        </li>
+      </ul>
+
+      <hr /> */}
+      <Route exact path="/" component={Dashboard} />
+      <Route exact path="/about" component={UserProfile} />
+      <Route exact path="/content" component={ContentContainer} />
+      {/* <Route exact path="/" component={LoginPage} /> */}
+      {/* <Route path="/about" component={About} />
+      <Route path="/topics" component={Topics} /> */}
+    </div>
+  </Router>
           <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
         </main>
       </div>

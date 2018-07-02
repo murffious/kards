@@ -274,3 +274,14 @@ BONUS CSS : :last-child :first-child :hover
 cursor (for cool hand on hovers etc) opacity: Using the \* selector and ‘box-sizing: border-box’ What is a named entity in html and what is the one for copyright (for footer) ?
 
 FINAL SUBMISSION CHECK -Did I test my links I submitted to make sure they take me to a screen the instructional staff needs to grade it ?
+
+###### MODES - FUTURE FEATURES
+
+Mastery Mode add new langauges and review
+REview Google interview Questions on said topic and yo uwill see some new stuff come up
+
+Score disclosure and info
+Interview Questions missed minus score
+
+ADMIN MODE
+see all students trouble areas

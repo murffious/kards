@@ -14,7 +14,7 @@ const percentage = 44;
 
 export const Progressbar = (props) => (
   <div>
-    <Label>Basic example</Label>
+    {/* <Label>Basic example</Label> */}
     <div style={{ width: '100px' }}>
       <CircularProgressbar percentage={percentage} text={`${percentage}%`} />
     </div>

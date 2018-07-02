@@ -19,6 +19,9 @@ import Accessibility from "@material-ui/icons/Accessibility";
 import BugReport from "@material-ui/icons/BugReport";
 import Code from "@material-ui/icons/Code";
 import Cloud from "@material-ui/icons/Cloud";
+import Settings from "@material-ui/icons/Settings";
+import LaptopMac from "@material-ui/icons/LaptopMac";
+
 // core components
 import GridItem from "../../components/Grid/GridItem.jsx";
 import Table from "../../components/Table/Table.jsx";
@@ -40,6 +43,8 @@ import {
 } from "../../variables/charts.jsx";
 
 import dashboardStyle from "../../assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
+import { Progressbar } from "../../../../circular-progress-bar/CircularProgressBar";
+import SwitchLabels from "../../../../Swtiches";
 
 class Dashboard extends React.Component {
   state = {
@@ -63,10 +68,8 @@ class Dashboard extends React.Component {
                 <CardIcon color="warning">
                   <ContentCopy />
                 </CardIcon>
-                <p className={classes.cardCategory}>Used Space</p>
-                <h3 className={classes.cardTitle}>
-                  49/50 <small>GB</small>
-                </h3>
+                <p className={classes.cardCategory}>INFO READ ME</p>
+                <h3 className={classes.cardTitle}>How to use this tool ?</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
@@ -74,7 +77,7 @@ class Dashboard extends React.Component {
                     <Warning />
                   </Danger>
                   <a href="#pablo" onClick={e => e.preventDefault()}>
-                    Get more space
+                    LEARN
                   </a>
                 </div>
               </CardFooter>
@@ -84,15 +87,16 @@ class Dashboard extends React.Component {
             <Card>
               <CardHeader color="success" stats icon>
                 <CardIcon color="success">
-                  <Store />
+                  <Progressbar />
                 </CardIcon>
-                <p className={classes.cardCategory}>Revenue</p>
-                <h3 className={classes.cardTitle}>$34,245</h3>
+
+                <p className={classes.cardCategory}>Mastery Score</p>
+                <h3 className={classes.cardTitle}>76</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
                   <DateRange />
-                  Last 24 Hours
+                  40% Total Completion of all task
                 </div>
               </CardFooter>
             </Card>
@@ -101,15 +105,17 @@ class Dashboard extends React.Component {
             <Card>
               <CardHeader color="danger" stats icon>
                 <CardIcon color="danger">
-                  <InfoOutline />
+                  <LaptopMac />
                 </CardIcon>
-                <p className={classes.cardCategory}>Fixed Issues</p>
-                <h3 className={classes.cardTitle}>75</h3>
+                {/* <p className={classes.cardCategory}>Fixed Issues</p> */}
+                <h3 className={classes.cardTitle}>
+                  <p>Get a front end developer job by August 2018</p>
+                </h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
                   <LocalOffer />
-                  Tracked from Github
+                  My Developer Goal
                 </div>
               </CardFooter>
             </Card>
@@ -118,10 +124,11 @@ class Dashboard extends React.Component {
             <Card>
               <CardHeader color="info" stats icon>
                 <CardIcon color="info">
-                  <Accessibility />
+                  <Settings />
                 </CardIcon>
-                <p className={classes.cardCategory}>Followers</p>
-                <h3 className={classes.cardTitle}>+245</h3>
+
+                <p className={classes.cardCategory}>Settings</p>
+                <SwitchLabels />
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
@@ -132,7 +139,7 @@ class Dashboard extends React.Component {
             </Card>
           </GridItem>
         </Grid>
-        <Grid container>
+        {/* <Grid container>
           <GridItem xs={12} sm={12} md={4}>
             <Card chart>
               <CardHeader color="success">
@@ -209,7 +216,7 @@ class Dashboard extends React.Component {
               </CardFooter>
             </Card>
           </GridItem>
-        </Grid>
+        </Grid> */}
         <Grid container>
           <GridItem xs={12} sm={12} md={6}>
             <CustomTabs
@@ -217,7 +224,7 @@ class Dashboard extends React.Component {
               headerColor="primary"
               tabs={[
                 {
-                  tabName: "Bugs",
+                  tabName: "Skills",
                   tabIcon: BugReport,
                   tabContent: (
                     <Tasks
@@ -228,7 +235,7 @@ class Dashboard extends React.Component {
                   )
                 },
                 {
-                  tabName: "Website",
+                  tabName: "Content ToDo",
                   tabIcon: Code,
                   tabContent: (
                     <Tasks
@@ -239,7 +246,7 @@ class Dashboard extends React.Component {
                   )
                 },
                 {
-                  tabName: "Server",
+                  tabName: "Sandbox Ideas",
                   tabIcon: Cloud,
                   tabContent: (
                     <Tasks
@@ -255,18 +262,18 @@ class Dashboard extends React.Component {
           <GridItem xs={12} sm={12} md={6}>
             <Card>
               <CardHeader color="warning">
-                <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
+                <h4 className={classes.cardTitleWhite}>Sections Completed</h4>
                 <p className={classes.cardCategoryWhite}>
-                  New employees on 15th September, 2016
+                  First section completed on May 24th 2018
                 </p>
               </CardHeader>
               <CardBody>
                 <Table
                   tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Salary", "Country"]}
+                  tableHead={["Number", "Name", "Score", "Redo"]}
                   tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
+                    ["1", "HTML", "66", "BUtton to redo"],
+                    ["2", "JavaScript", "88", "Curaçao"],
                     ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
                     ["4", "Philip Chaney", "$38,735", "Korea, South"]
                   ]}

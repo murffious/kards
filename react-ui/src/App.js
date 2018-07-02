@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import MiniDrawer from "./components/AppBar";
 import LoginPage from './components/LoginPage';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Dashboard from './components/dashboard/src/views/Dashboard/Dashboard.jsx';
+
  
 
 class App extends Component {
@@ -11,7 +10,9 @@ class App extends Component {
     super(props);
     this.state = {
       message: null,
-      fetching: true
+      fetching: true,
+      // Set to false when AUTH is hookedup lol
+      auth: true
     };
   }
 
@@ -39,9 +40,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Dashboard />
-        {/* <MiniDrawer /> */}
-        {/* <LoginPage /> */}
+      
+        {this.state.auth? <MiniDrawer />: <LoginPage />}
+        {/* add login redirect */}
         <p className="App-intro">
           {'This is '}
           <a href="https://github.com/mars/heroku-cra-node">
@@ -53,30 +54,7 @@ class App extends Component {
             ? 'Fetching message from API'
             : this.state.message}
         </p>
-        <Router>
-    <div>
-      {/* <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/topics">Topics</Link>
-        </li>
-      </ul>
-
-      <hr /> */}
-
-      {/* <Route exact path="/" component={LoginPage} /> */}
-      {/* <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} /> */}
-    </div>
-  </Router>
-        <div>
-   
-  </div>      
+     
     
       </div>
     );

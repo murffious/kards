@@ -90,7 +90,7 @@ Remember to know about all the ‘attributes’ of each tag! Reference: https://
 
           </Typography>
           <Typography component="p">
-            well meaning and kindly.<br />
+            VOCAB - TECHNICAL TERMS TO KNOW<br />
             {'"a benevolent smile"'}
           </Typography>
           </div>
