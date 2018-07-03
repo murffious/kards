@@ -285,3 +285,10 @@ Interview Questions missed minus score
 
 ADMIN MODE
 see all students trouble areas
+
+student feedback - SKIP mode became improtant -
+
+maybe try out integrating google calenders and stuff into this for task to do lst
+
+Knowledge Aquired Rapidly & Deeply S
+by Developers
