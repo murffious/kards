@@ -292,3 +292,9 @@ maybe try out integrating google calenders and stuff into this for task to do ls
 
 Knowledge Aquired Rapidly & Deeply S
 by Developers
+
+drag drop ...?
+skills drag into JOB title
+
+build my dev
+interact somewho to resue my laylist
