@@ -20,7 +20,8 @@ const UserSchema = new Schema({
     notifications: { type: Boolean, default: false },
     skills: {type : Array},
     to_dos: { type: Array },
-    sandbox_ideas: { type: Array }
+    sandbox_ideas: { type: Array },
+    goal: { type: String }
 });
 
 export default mongoose.model('User', UserSchema);

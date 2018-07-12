@@ -49,6 +49,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Dashboard from './dashboard/src/views/Dashboard/Dashboard.jsx';
 import ContentContainer from '../containers/ContentContainer';
 import UserProfile from './dashboard/src/views/UserProfile/UserProfile';
+import { withRouter, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import axios from "axios";
 
 library.add(fab, faHtml5, faCss3Alt, faJs, faNodeJs, faDatabase, faGithubSquare, faLinkedinIn, faGoogle, faLaptop, faCode, faTerminal )
 
@@ -134,7 +137,9 @@ const styles = theme => ({
 class MiniDrawer extends React.Component {
   state = {
     open: false,
-    expand: false
+    expand: false,
+    loggedIn: true
+    // user: null
   };
 
   handleExpand = () => {
@@ -148,7 +153,23 @@ class MiniDrawer extends React.Component {
     this.setState({ open: false });
   };
 
-  render() {
+  _logout(event) {
+    event.preventDefault();
+    console.log("logging out");
+    axios.post("/auth/logout").then(response => {
+      console.log(response.data);
+      if (response.status === 200) {
+        this.setState({
+          loggedIn: false,
+          user: null
+        });
+      }
+    });
+  }
+//   handleClick= () => {
+//     this.props.history.push('/content');
+//  }  
+ render() {
     const { classes, theme } = this.props;
 
     return (
@@ -173,7 +194,9 @@ class MiniDrawer extends React.Component {
               <NavigationIcon className={classes.extendedIcon} />
               Reference Guide
             </Button>
-
+            <IconButton   onClick={this._logout.bind(this)} color="secondary" className={classes.button} aria-label="Add an alarm">
+              <Icon>alarm</Icon>
+            </IconButton>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -202,11 +225,13 @@ class MiniDrawer extends React.Component {
           </List>
           <Collapse in={this.state.expand} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+            <Link    to="/content" style={{ textDecoration: 'none' }}>
+            <ListItem button className={classes.nested}>
                 {/* <ListItemIcon>
                 </ListItemIcon> */}
                 <ListItemText inset primary="Elements" />
               </ListItem>
+              </Link>
               <ListItem button className={classes.nested}>
                 {/* <ListItemIcon>
                 </ListItemIcon> */}
@@ -226,29 +251,31 @@ class MiniDrawer extends React.Component {
           {/* <div >
           <Kard />
           </div> */}
+          
+         
              <Router>
     <div>
-      {/* <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/topics">Topics</Link>
-        </li>
-      </ul>
-
-      <hr /> */}
+     {/* might need this structure
+     <Route path="/portfolio">
+    <IndexRoute component={PortfolioPage}/>
+    <Route path="/xyz" component={XyzPage} />
+  </Route> coudl use state value redirect stuff dyanic
+  this.props.history.push(`/panorama/${imageUrl}`);*/}
+      
       <Route exact path="/" component={Dashboard} />
       <Route exact path="/about" component={UserProfile} />
-      <Route exact path="/content" component={ContentContainer} />
-      {/* <Route exact path="/" component={LoginPage} /> */}
-      {/* <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} /> */}
+      <Route exact path="/content" render={() => <ContentContainer />}  />
+      
+
+  {/* <Route exact path="/content/:id" render={() => <ContentContaineruser />}  /> */}
+
     </div>
   </Router>
+      
+      {/* ON successful loout go to account screen */}
+        {/* {!this.state.loggedIn
+                                ? <Redirect to="/login"/>
+                                : null} */}
           <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
         </main>
       </div>
@@ -261,4 +288,10 @@ MiniDrawer.propTypes = {
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(MiniDrawer);
+function mapStateToProps(state) {
+    
+  return {
+     
+} 
+}
+export default withStyles(styles, { withTheme: true })(withRouter(connect(mapStateToProps)(MiniDrawer)));

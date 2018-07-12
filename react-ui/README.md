@@ -4,6 +4,13 @@ If KARD mastering score is less than 4/5 or 80 overall tehn RESET and start over
 
 SO in master list its just a reference of where to go and bypass all this fancy stuff
 
+###### modes : course , pro , in pro you get more conetent like react material ui and such
+
+switch at the top and ... more content, pick your stack etc
+interview quetions as quizes
+
+as you go
+
 Dashbaord
 has 1 graph of overal mastery scores
 overall tasks done and left
@@ -298,3 +305,10 @@ skills drag into JOB title
 
 build my dev
 interact somewho to resue my laylist
+
+I could have a smart notifier - based on to do notify about that or what ever
+\
+
+ROUTING side bar note:
+
+### when clicking the main header like HTML instead of a sub header you could see all the whole list and what not
