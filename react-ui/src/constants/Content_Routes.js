@@ -98,17 +98,23 @@ Header
    What are all these tags used for and what attibutras and syntax do they have.
    why or where do they fit into my project. 
 
-   CODE 
+Learn the syntax and how and why to use this
+I may jsut have to give one example KARD for each page  - click a popup modal 
+    ex: <a src=""
+CODE 
 CODING building stuff - 
 exercises like drills 
 reading code dissect - 
 vocab/sytnax learning 
 concepts exploration
 best practices and design patterns
+libriaries 
+languages
 
 
 programmer skills
 debugging
+google foo
 reading documations 
 learning quickly 
 tools mastery
@@ -117,6 +123,12 @@ understaning Computers
 comptuer Science Concpets 
 problem solving
 and the internet etc
+typing skills
+
+
+full stack knowledge
+13.1 - Introduction to Node Servers
+
 
 copy paste and change data and stuff to meet your needs 
 solve problems 
