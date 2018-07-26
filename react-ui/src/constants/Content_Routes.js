@@ -101,7 +101,11 @@ Header
 Learn the syntax and how and why to use this
 I may jsut have to give one example KARD for each page  - click a popup modal 
     ex: <a src=""
-CODE 
+UlITMATE GOALS- CREATE QULAITY SOFTWARE REALTIVELY QUICKLY 
+List of job duties a developer will do here. 
+
+
+    CODE 
 CODING building stuff - 
 exercises like drills 
 reading code dissect - 
@@ -125,6 +129,21 @@ problem solving
 and the internet etc
 typing skills
 
+list of items to create like a like button 
+comments box
+using bootstrap and materiaul ui track time in the sandbox folder and class repo. 
+
+I tried to use my time to code but did not code much just watched those videos and tried to redo class activities. 
+
+REFERENCE GUIDE
+Sandbox helper and ideas for CODING time 
+how to make that time effective. 
+time 5 min reading and then go and try to use it. 
+
+KEYs to success
+layouts
+clean code
+DRY 
 
 full stack knowledge
 13.1 - Introduction to Node Servers
